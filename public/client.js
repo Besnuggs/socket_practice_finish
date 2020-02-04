@@ -1,6 +1,6 @@
     
 // Make connection
-const socket = io.connect('http://localhost:3500');
+const socket = io.connect('http://localhost:3000');
 
 // Query DOM
 const message = document.getElementById('message'),

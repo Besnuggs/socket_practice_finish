@@ -1,14 +1,17 @@
+require('dotenv').config()
 const express = require('express'),
         app = express(),
-        socket = require('socket.io')
+        socket = require('socket.io'),
+        PORT = process.env.PORT
        
 
 // App Setup
-PORT = 3500;
 const server = app.listen(PORT, () => console.log('✨  Magic ✨  is happening on port, ' + PORT + ''));
 
 // Static Files
-app.use(express.static('./'));
+app.use("/", express.static(__dirname + "/public/views"));
+app.use("/", express.static(__dirname + "/public/"));
+
 
 // Socket Connection and Server
 const io = socket(server);
