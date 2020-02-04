@@ -1,6 +1,6 @@
     
 // Make connection
-const socket = io.connect('http://localhost:3000');
+const socket = io.connect('https://socket-io-training.herokuapp.com/');
 
 // Query DOM
 const message = document.getElementById('message'),
