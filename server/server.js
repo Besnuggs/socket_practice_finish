@@ -8,7 +8,7 @@ PORT = 3500;
 const server = app.listen(PORT, () => console.log('✨  Magic ✨  is happening on port, ' + PORT + ''));
 
 // Static Files
-app.use(express.static('./public'));
+app.use(express.static('./'));
 
 // Socket Connection and Server
 const io = socket(server);
